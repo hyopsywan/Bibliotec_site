@@ -1,37 +1,3 @@
-/*CABEÇALHO*/
-
-a {
-    color: var(--branco);
-    text-decoration: none;
-}
-
-.cabecalho {
-    background-color: var(--azul-escuro);
-
-    display: flex;
-    /*alinha no sentido do flex*/
-    justify-content: space-between;
-    
-    /*alinha no sentido oposto do flex*/
-    align-items: center;
-
-    padding: 0 120px;
-    height: 10vh; /* 10vh é 10% da visualização do dispositivo*/
-
-}
-
-.navegacao {
-    display: flex;
-    align-items: center;
-
-    gap: 50px;
-}
-
-.navegacao a {
-    text-transform: uppercase;
-    font-size: 1em; /*REM equivile a 16px e 1em pega do pai, sendo responsivo*/
-    font-weight: 500;
-}
 
 
 /*CONTEÚDO PRINCIPAL*/
@@ -82,32 +48,35 @@ a {
     font-weight: 700;
 }
 
-.botao:hover/*Faz o efeito de passar o cursor em cima do botão*/{
+.botao:hover
+
+/*Faz o efeito de passar o cursor em cima do botão*/
+    {
     background-color: #2ab2ab;
     color: var(--branco);
 }
 
 /* Muda o tipo de curdor - Cursor: pointer; */
 
-.banner-principal img{
+.banner-principal img {
     align-self: flex-end;
     width: 35%;
 }
 
 /* TITULO DAS SEÇÕES */
 
-.titulo-secao{
+.titulo-secao {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.titulo-secao h2{
+.titulo-secao h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
 }
 
-.titulo-secao span{
+.titulo-secao span {
     display: flex;
     width: 250px;
     height: 4px;
@@ -116,7 +85,7 @@ a {
 
 /* SEÇÃO BENEFÍCIOS */
 
-.beneficios{
+.beneficios {
     padding: 50px 120px;
     display: flex;
     flex-direction: column;
@@ -125,14 +94,14 @@ a {
     gap: 100px;
 }
 
-.beneficios-lista{
+.beneficios-lista {
     display: grid;
-    grid-template-columns: repeat(3,20%);
+    grid-template-columns: repeat(3, 20%);
     gap: 10%;
     justify-content: center;
 }
 
-.card-beneficio{
+.card-beneficio {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,30 +110,36 @@ a {
     border: 1px solid var(--azul-escuro);
     border-radius: 30px;
 
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25); /*x -. y -. blur -> cor com transparência*/
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+    /*x -. y -. blur -> cor com transparência*/
     text-align: center;
 
-    position: relative;/*Cria referencia de posicionamento para o ícone, quando o ícone for posicionado, usa esse card como referencia*/
+    position: relative;
+    /*Cria referencia de posicionamento para o ícone, quando o ícone for posicionado, usa esse card como referencia*/
 }
 
-.beneficio-icone img{
+.beneficio-icone img {
     width: 50%;
 }
 
-.beneficio-icone{
+.beneficio-icone {
     border: 4px solid var(--cor-destaque);
     background-color: var(--branco);
     border-radius: 50%;
     width: 30%;
     height: 30%;
 
-    position: absolute;/*Retira o ícone do fluxo normal, com o absolute ele pode ficar por cima do card*/
+    position: absolute;
+    /*Retira o ícone do fluxo normal, com o absolute ele pode ficar por cima do card*/
 
-    top: -15%;/*Move o circulo para cima, o valor negativo faz ele sair parcialmente do card*/
+    top: -15%;
+    /*Move o circulo para cima, o valor negativo faz ele sair parcialmente do card*/
 
-    left: 50%;/*Coloca o elemento em 50% da largura do card*/
+    left: 50%;
+    /*Coloca o elemento em 50% da largura do card*/
 
-    transform: translate(-50%);/*Ajustamos o posicionamento dos elementos, mas a borda esquerda do circulo fica na esquerda, não o circulo inteiro.
+    transform: translate(-50%);
+    /*Ajustamos o posicionamento dos elementos, mas a borda esquerda do circulo fica na esquerda, não o circulo inteiro.
     Por isso usamos trasform que move o circulo para a esquerda 50% da largura dele*/
 
     display: grid;
@@ -173,21 +148,21 @@ a {
     /* align-items: center; e justify-items: center; = place-items: center; */
 }
 
-.card-beneficio h3{
+.card-beneficio h3 {
     font-size: 1.2em;
     margin-bottom: 30px;
     text-transform: uppercase;
     width: 90%;
 }
 
-.card-beneficio p{
+.card-beneficio p {
     font-size: 1em;
     width: 80%;
 }
 
 /* SEÇÃO ACESSO */
 
-.banner-meio{
+.banner-meio {
     height: 60vh;
     background-image: url(../imgs/Banner\ centro.svg);
     background-size: cover;
@@ -218,14 +193,14 @@ a {
 }
 
 .livro {
- display: flex;
- flex-direction: column;
- 
- align-items: center;
- justify-content: space-between;
- 
- gap: 20px;
- text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    text-align: center;
 
 }
 

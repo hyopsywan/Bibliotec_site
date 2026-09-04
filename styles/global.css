@@ -11,6 +11,7 @@
     --texto: #26333d;
     --branco: #ffffff;
     --cor-destaque: #2fd6cb;
+    --fundos: #e9f0ef;
 }
 
 body {
@@ -18,6 +19,46 @@ body {
     background-color: var(--branco);
     color: var(--texto);
 }
+
 html {
     scroll-behavior: smooth;
 }
+
+
+/*CABEÇALHO*/
+
+a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.cabecalho {
+    background-color: var(--azul-escuro);
+
+    display: flex;
+    /*alinha no sentido do flex*/
+    justify-content: space-between;
+
+    /*alinha no sentido oposto do flex*/
+    align-items: center;
+
+    padding: 0 120px;
+    height: 10vh;
+    /* 10vh é 10% da visualização do dispositivo*/
+
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.navegacao a {
+    text-transform: uppercase;
+    font-size: 1em;
+    /*REM equivile a 16px e 1em pega do pai, sendo responsivo*/
+    font-weight: 500;
+}
+
