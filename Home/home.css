@@ -217,3 +217,53 @@
 .livro-texto {
     font-size: 0.8em;
 }
+
+/* RODAPE */
+
+ footer {
+    height: 40vh;
+
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+ }
+
+ footer h4 {
+    color: var(--cor-destaque);
+ }
+
+ .info-biblioteca h4 {
+    margin-bottom: 15px
+ }
+
+ .conteudo-biblioteca  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ .info-quem-somos h4 {
+    margin-bottom: 15px
+}
+
+.conteudo-quem-somos{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-redes-sociais{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.rodape-logos {
+    width: 176px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+
