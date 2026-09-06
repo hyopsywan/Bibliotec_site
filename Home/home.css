@@ -221,7 +221,8 @@
 /* RODAPE */
 
  footer {
-    height: 40vh;
+    height: 45vh;
+    padding: 50px 0px 50px 0px;
 
     background-color: var(--azul-escuro);
     color: var(--branco);
@@ -248,22 +249,83 @@
 .conteudo-quem-somos{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 .info-redes-sociais{
+    width: 470px;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
 
+.conteudo-redes-sociais {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .rodape-logos {
-    width: 176px;
-    height: 200px;
+    width: 150px;
+    height: 145px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
  }
 
+ .bloco-informacoes {
+    width: 400px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+ }
+
+.main-informacoes {
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+
+    padding: 50px 120px;
+ }
+
+ .conteudo-principal-links {
+    width: 470px;
+    height: 160px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+ }
+
+ span {
+    display: flex;
+    background-color: var(--branco);
+
+    margin: 0px 120px;
+    width: 1675px;
+    height: 1px;
+    
+ }
+
+ .conteudo-rodape-inferior {
+    margin-top: 30px;
+    padding: 0px 120px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .rodape-inferior {
+   display: flex;
+   justify-content: space-between;
+    width: 500px;
+    margin-right: -10px;
+ }
 
