@@ -3,6 +3,6 @@ const Senha = document.getElementById("senha");
 const btnSenha = document.querySelector("#mostrar-senha")
 
 btnSenha.addEventListener("click", function() {
-    alert("Cliquei no botão!");
-    
+    //alert("Cliquei no botão!");
+    campoSenha.type = campoSenha.type == "password" ? "text" : "password";
 })
