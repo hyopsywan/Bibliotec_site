@@ -10,24 +10,22 @@
 }
 
 .campo-busca {
-    /*Esse elemnto pode ocupar o espaço disponível dentro do container flex.*/
     flex: 1;
-    /*
-        flex: 1; é a mesma coisa que:width: 
-        flex-grow: 1; o elemnto cresce quando sobra espaço
-        flex-shrink: 1; o elemnto pode encolher quando não existe espaço o suficiente
-        flex-basis: 0%; fala para o elemnto começar do 0%
-    */
+    /*Esse elemento pode ocupar o espaço disponivel dentro do container flex*/
+
+    /*Flex: 1; é a mesma coisa que:
+        flex-grow: 1; o elemento pode crescer quando sobra espaço
+        flex-shrink: 1; o elemento pode encolher quando não existe espaço suficiente
+        flex-basis: 0% fala para o elemento começar do 0% e junto com os outros, pode crescer e diminuir*/
 
     height: 50px;
     padding: 0 20px;
-
-    border: 1px solid var(--branco);
+    border: 1px solid var(--cor-bordas);
     border-radius: 10px;
-
     background-color: var(--branco);
 
     display: flex;
+
     align-items: center;
     gap: 20px;
 }
@@ -39,19 +37,16 @@
 
 .campo-busca input {
     flex: 1;
-
-    height: 100%;
-
     border: none;
     outline: none;
-
+    height: 100%;
     font-family: inherit;
+    /*Estamos dizendo para herdar a fonte do pai*/
     font-size: 1.1em;
     color: var(--textos-paginas);
-
 }
 
-/* FILTROS */
+/* FILTRO */
 
 .botao-filtro {
     height: 50px;
@@ -90,37 +85,37 @@
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* CABEÇALHO LISTA */
 .cabecalho-lista {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-
     align-items: center;
     padding: 0 20px 20px;
-
     font-weight: 700;
 }
 
-.cabecalho-lista h2:nth-child(1) {
+/* ALINHANDO O NOME A ESQUERDA */
+
+.cabecalho-lista h2:nth-child(1){
     text-align: left;
 }
 
-/*alinhando o restante ao centro*/
-.cabecalho-lista h2 {
+/* ALINHANDO O RESTANTE AO CENTRO */
+
+.cabecalho-lista h2{
     text-align: center;
     font-size: 1em;
 }
 
-/* LSITA DE LIVROS*/
+/* LISTA DE LIVROS */
 
-.lista-livros {
+.lista-livros{
     display: flex;
     flex-direction: column;
 
     gap: 20px;
 }
 
-.livro {
+.livro{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 
@@ -136,48 +131,48 @@
     font-size: 1em;
 }
 
-.livro p:nth-child(1) {
+.livro p:nth-child(1){
     justify-self: flex-start;
 }
 
 /* CHECKBOX */
 
-input[type="checkbox"] {
+input[type="checkbox"]{
     height: 30px;
     width: 30px;
 
     border: 1px solid var(--textos-paginas);
     border-radius: 5px;
 
-    /*Cancela aparencia default do checkbox*/
+    /* muda a cor do checkbox */
+    /* accent-color: var(--cor-destaque); */
+
+    /* cancela aparencia padrão do checkbox */
     appearance: none;
     cursor: pointer;
 }
 
-input[type="checkbox"]:checked {
+input[type="checkbox"]:checked /*pseudoclasse*/{
     background-color: var(--cor-destaque);
     border: none;
 }
 
-input[type="checkbox"]:checked::after {
+input[type="checkbox"]:checked::after/*o after permite a gente desenhar dentro do elemento*/{
     content: "✓";
-
+    color: var(--branco);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     height: 100%;
     width: 100%;
-
-    color: var(--branco);
-
     font-size: 20px;
     font-weight: 800;
 }
 
-/*BOTÕES DE AÇÃO*/
+/* BOTÕES DE AÇÃO */
 
-.botao-acao {
+.botao-acao{
     border: none;
     background-color: transparent;
 
@@ -187,13 +182,11 @@ input[type="checkbox"]:checked::after {
     transition: 0.3s;
 }
 
-.botao-acao:hover {
+.botao-acao:hover{
     color: var(--cor-destaque);
     transform: translateY(-1px);
     cursor: pointer;
 }
-
-/*RODAPÉ LISTAGEM*/
 
 .rodape-listagem {
     margin-top: 30px;
@@ -206,29 +199,32 @@ input[type="checkbox"]:checked::after {
     align-items: center;
 }
 
-.quantidade-livros {
-    font-size: 0.8em;
+.quantidade-livros{
+    font-size: 0,8em;
     color: var(--textos-paginas);
     font-weight: 600;
 }
 
-.paginacao {
+.pagina-acao{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.botao-pagina {
+.botao-pagina{
     border: none;
     background-color: transparent;
 
     color: var(--textos-paginas);
     font-size: 15px;
-
     cursor: pointer;
 }
 
-.pagina-atual {
+.pagina-atual{
+
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,9 +233,6 @@ input[type="checkbox"]:checked::after {
     height: 30px;
 
     border-radius: 10px;
-
-    background-color: var(--azul-escuro);
-    color: var(--branco);
 
     font-size: 0.8em;
     font-weight: 700;
