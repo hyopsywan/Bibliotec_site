@@ -237,3 +237,11 @@ input[type="checkbox"]:checked::after/*o after permite a gente desenhar dentro d
     font-size: 0.8em;
     font-weight: 700;
 }
+
+.status {
+    color: #D34A00;
+}
+
+.status-retirado {
+    color: #00A223;
+}
