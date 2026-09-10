@@ -1,5 +1,4 @@
 
-
 /*CONTEÚDO PRINCIPAL*/
 
 /*Primeiro banner*/
@@ -33,7 +32,7 @@
 
 .texto-banner p {
     font-size: 1.5em;
-    width: 50%;
+    width: 60%;
 }
 
 .botao {
@@ -407,3 +406,150 @@ footer span {
     margin-right: -10px;
  }
  */
+
+/* RESPONSIVIDADE */
+.botao-menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    /* Esconde o elemnto */
+    display: none;
+
+}
+
+.botao-menu i {
+    font-size: 2em;
+    color: var(--branco);
+}
+
+/* RESPONSIVIDADE COM TAMANHOS -> MEDIA QUERY*/
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 12px;
+    }
+
+    .cabecalho img {
+        width: 60%;
+    }
+
+    .texto-banner h1 {
+        text-align: center;
+    }
+
+    /* BENEFICIOS */
+    .beneficios {
+        gap: 50px;
+
+        padding: 30px 0;
+
+        overflow: hidden;
+    }
+
+    .beneficios-lista {
+        grid-template-columns: repeat(3, 30%);
+
+        overflow-x: scroll; /*Permite que o objeto role para o eixo x, no caso para os lados*/
+
+        padding: 50px 20px;
+        justify-content: flex-start;
+    }
+
+    .beneficios-lista::-webkit-scrollbar {
+        display: none;
+    }
+
+    .beneficio {
+        padding: 80px 10px 50px;
+    }
+
+    .beneficio h3 {
+        margin-bottom: 25px;
+        width: 60%;
+    }
+
+    .beneficio p {
+         width: 60%;
+    }
+
+    /*BANNER MEIO*/
+
+    .banner-meio{
+        background-position: center;
+        padding: 0 30px;
+    }
+
+    .banner-meio .texto-banner {
+        align-items: flex-end;
+    }
+    
+    .banner-meio .texto-banner p {
+        text-align: right;
+    }
+
+    /* ACERVO */
+    .acervo {
+        padding: 70px 40px;
+        gap: 50px;
+    }
+
+    .livros {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+        gap: 40px 20px;
+    }
+
+    .livro img {
+        max-width: 100%;
+    }
+
+    .livro h3 {
+        font-size: 1.2em;
+    }
+
+    .livro-texto {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 0 40px;
+
+        position: relative;
+    }
+
+    .botao-menu {
+        /* faz o menu hamburguer aparecer na tela */
+        display: flex;
+    }
+
+    .navegacao {
+        background-color: var(--azul-escuro);
+
+        position: absolute;
+        /* distancia de 10vh do topo */
+        top: 10vh;
+        /* encosta na esquerda */
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 40PX;
+
+        border-radius: 0 0 0 30PX;
+
+        flex-direction: column;
+        align-items: flex-end;
+
+        gap: 20px;
+
+        z-index: 100; /*Diz a camada em que o elemnto está, só funciona com o position*/
+
+        display: none;
+    }
+
+    
+}
