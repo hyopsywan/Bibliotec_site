@@ -1,4 +1,3 @@
-
 /*CONTEÚDO PRINCIPAL*/
 
 /*Primeiro banner*/
@@ -219,7 +218,7 @@
 
 /* footer - feito pelos alunos */
 
-footer{
+footer {
     background-color: var(--azul-escuro);
     color: var(--branco);
     padding: 100px 120px 30px;
@@ -244,7 +243,7 @@ footer{
     gap: 100px;
 }
 
-.nav-footer  {
+.nav-footer {
     display: flex;
     flex-direction: column;
 }
@@ -254,6 +253,7 @@ footer{
     margin-bottom: 20px;
 
 }
+
 .nav-footer a {
     color: var(--branco);
     margin-bottom: 10px;
@@ -409,23 +409,23 @@ footer span {
 
 /* RESPONSIVIDADE */
 .botao-menu {
-    background-color: transparent;
+    display: none; /* esconde o elemento */
+    background: transparent;
     border: none;
     cursor: pointer;
-
-    /* Esconde o elemnto */
-    display: none;
-
 }
 
 .botao-menu i {
     font-size: 2em;
+
     color: var(--branco);
+    border-radius: 10px;
 }
 
-/* RESPONSIVIDADE COM TAMANHOS -> MEDIA QUERY*/
+/* RESPONSIVIDADE COM TAMANHOS -> MEDIA QUERY */
 
 @media (max-width: 1024px) {
+    
     html {
         font-size: 12px;
     }
@@ -439,6 +439,7 @@ footer span {
     }
 
     /* BENEFICIOS */
+
     .beneficios {
         gap: 50px;
 
@@ -450,10 +451,12 @@ footer span {
     .beneficios-lista {
         grid-template-columns: repeat(3, 30%);
 
-        overflow-x: scroll; /*Permite que o objeto role para o eixo x, no caso para os lados*/
+        overflow-x: scroll; /*permite que o objeto role para o lado*/
 
         padding: 50px 20px;
+
         justify-content: flex-start;
+
     }
 
     .beneficios-lista::-webkit-scrollbar {
@@ -470,12 +473,12 @@ footer span {
     }
 
     .beneficio p {
-         width: 60%;
+        width: 60%;
     }
 
-    /*BANNER MEIO*/
+    /* BANNER MEIO */
 
-    .banner-meio{
+    .banner-meio {
         background-position: center;
         padding: 0 30px;
     }
@@ -483,7 +486,7 @@ footer span {
     .banner-meio .texto-banner {
         align-items: flex-end;
     }
-    
+
     .banner-meio .texto-banner p {
         text-align: right;
     }
@@ -499,6 +502,13 @@ footer span {
 
         gap: 40px 20px;
     }
+    
+    /* PARA QUEM USOU FLEX, COLOCAR NOS LIVROS
+        flex-wrap: wrap;
+    */
+    /* E NO article 
+        max-width: 100%
+    */
 
     .livro img {
         max-width: 100%;
@@ -511,9 +521,11 @@ footer span {
     .livro-texto {
         font-size: 1em;
     }
+
 }
 
 @media (max-width: 768px) {
+
     .cabecalho {
         padding: 0 40px;
 
@@ -521,35 +533,216 @@ footer span {
     }
 
     .botao-menu {
-        /* faz o menu hamburguer aparecer na tela */
+        /* Faz o menu hamburguer aparecer novamente */
         display: flex;
     }
 
     .navegacao {
+
         background-color: var(--azul-escuro);
 
         position: absolute;
         /* distancia de 10vh do topo */
         top: 10vh;
+
         /* encosta na esquerda */
         left: 0;
 
         width: 100%;
         height: auto;
 
-        padding: 40PX;
+        padding: 40px;
 
-        border-radius: 0 0 0 30PX;
+        border-radius: 0 0 0 30px;
 
         flex-direction: column;
         align-items: flex-end;
 
         gap: 20px;
 
-        z-index: 100; /*Diz a camada em que o elemnto está, só funciona com o position*/
+        /* só funciona com position, quanto maior o z-index, mais pra cima o elemento fica */
+        z-index: 100;
 
         display: none;
     }
 
-    
+    /* elemento com duas classes não tem espaço */
+    .navegacao.ativo {
+        display: flex;
+    }
+
+    /* BANNER PRINCIPAL */
+
+    .banner-principal {
+        height: 50vh;
+
+        padding: 30px 0 10px 0;
+        
+        position: relative;
+    }
+
+    .banner-principal .texto-banner {
+        width: 100%;
+        height: 100%;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .banner-principal .texto-banner h1 {
+        font-size: 2em;
+    }
+
+    .banner-principal .texto-banner p {
+        display: none;
+    }
+
+    .banner-principal img {
+        width: 40%;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 1;
+    }
+
+    .banner-principal .botao {
+        padding: 20px 40px;
+
+        font-size: 1.2em;
+
+        z-index: 2;
+    }
+
+    /* BENEFICIOS */
+    .beneficios-lista {
+        grid-template-columns: repeat(3, 45%);
+    }
+
+    .beneficio-icone img {
+        width: 40%;
+    }
+
+    /* BANNER DO MEIO */
+    .banner-meio .texto-banner {
+        display: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 50px 40px;
+    }
+
+    footer .main {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .rodape-logos {
+        flex-direction: row;
+        justify-content: space-between;
+
+        align-items: center;
+        gap: 30px;
+    }
+
+    .rodape-logos img {
+        width: 40%;
+    }
+
+    .rodape-informacoes {
+        gap: 30px;
+    }
+
+    .rodape-informacoes p {
+        font-size: 1.5em;
+    }
+
+    .nav-footer a, .footer-inferior {
+        font-size: 1.2em;
+    }
+
+    footer span {
+        margin: 50px 0 30px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: right;
+    }
+
 }
+
+@media (max-width: 500px) {
+    .banner-principal img {
+        width: 80%;
+    }
+
+    .beneficios-lista {
+        grid-template-columns: repeat(3,65%);
+    }
+
+    .beneficio-icone {
+        width: 35%;
+    }
+
+    .banner-meio {
+        background-position: 40%;
+    }
+
+    footer .main {
+        gap: 50px;
+    }
+
+    .rodape-informacoes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rodape-logos {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rodape-logos img {
+        width: 100%;
+    }
+
+    .rodape-icones {
+        display: flex;
+        gap: 10px;
+    }
+
+    .rodape-icones img {
+        width: 80%;
+    }
+
+    .footer-inferior {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer {
+        gap: 10px;
+        text-align: left;
+    }
+}
+/* 
+@media (max-width: 780px) {
+    footer {
+        padding: 80px 70px 30px;
+    }
+
+    .rodape-logos{
+        gap: 65%;
+    }
+
+    .rodape-logos img {
+        max-width: 70%;
+    }
+
+
+} */
